@@ -18,6 +18,15 @@ versions = {
         for str in strings:
             a = hashlib.sha1(str).hexdigest()
     """,
+    'murmur3': """\
+        import smhasher
+        for str in strings:
+            a = smhasher.murmur3_x64_64(str)
+    """,
+    'python': """\
+        for str in strings:
+            a = str.__hash__()
+    """,
 }
 
 def run(version, times=1000):
@@ -41,6 +50,12 @@ def main():
     run('sha1', times)
     run('md5', times)
     run('lookup3', times)
+    try:
+        import smhasher
+        run('murmur3', times)
+    except:
+        pass
+    run('python', times)
 
 if __name__ == '__main__':
     main()
