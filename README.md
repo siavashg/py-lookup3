@@ -1,6 +1,6 @@
 ##py-lookup3##
-A hash function for hash table lookup that is faster and more thorough than 
-the one you are using now.
+Python bindings for lookup3 ("A hash function for hash table lookup that is faster and more thorough than 
+the one you are using now.").
 
 **Install:**
 
@@ -14,6 +14,7 @@ the one you are using now.
 **Benchmark:**
 
     python benchmark.py
-    Ran sha1 1000 times in 2.52090787888
-    Ran md5 1000 times in 2.30922293663
-    Ran lookup3 1000 times in 0.572417974472
+    Ran md5 1000 times in 2.27848410606
+    Ran lookup3 1000 times in 0.56174492836
+    Ran murmur3 1000 times in 0.399135112762
+    Ran python 1000 times in 0.208546161652
